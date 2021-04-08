@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="nav">
+    <span>Our keep</span>
+    <button (click) = "revert()" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+      <mat-icon *ngIf="isAdd">save</mat-icon>
+      <mat-icon *ngIf="!isAdd">add</mat-icon>
+    </button>
+  </div>
+  <app-add-note *ngIf="isAdd===true"></app-add-note>
+  <div *ngIf="isAdd===false" class="cards">
+    <app-card-keep></app-card-keep>
+    <app-card-keep></app-card-keep>
+    <app-card-keep></app-card-keep>
+    <app-card-keep></app-card-keep>
+    <app-card-keep></app-card-keep>
+  </div>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="main">
+
+
+
+
+
+<mat-card class="Entrer">
+
+  <p [ngStyle]="{'color':color,
+  'fontSize':fonte+'px',
+  'font-family':font }">
+  Voici un exemple model
+</p>
+
+<mat-form-field  appearance="fill" class="inputs" >
+  <mat-label>Entrer la couleur</mat-label>
+<input
+(keyup) = "maCouleur(moninput.value)"
+   type="text" matInput #moninput>
+</mat-form-field >
+
+
+  <mat-form-field  appearance="fill" class="inputs">
+    <mat-label>Entrer la taille font</mat-label>
+  <input
+  (change) = "monFont(moninpute.value)"
+  type="number" matInput #moninpute>
+
+  </mat-form-field >
+
+  <mat-form-field appearance="fill" class="inputs" >
+    <mat-select [(ngModel)]="font">
+      <mat-option  value="Verdana">verdana</mat-option>
+      <mat-option value="garamond">Garamond</mat-option>
+      <mat-option value="Helvetica">Helvetica</mat-option>
+      <mat-option value="Tahoma">Tahoma</mat-option>
+      <mat-option value="Courier New">Courier New</mat-option>
+    </mat-select>
+
+  </mat-form-field>
+</mat-card>
+
+
+</div>
+
